@@ -15,4 +15,11 @@
   // Insert code here to initialize your application
 }
 
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    [NSApp activateIgnoringOtherApps:YES];
+    [self.window makeKeyAndOrderFront: nil];
+    return YES;
+}
+
 @end
