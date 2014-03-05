@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDB72CE318C7CE0800ABA136 /* WAVECreationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */; };
 		BDC39F8818C7C1B6007EA5FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */; };
 		BDC39F9218C7C1B6007EA5FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDC39F9018C7C1B6007EA5FC /* InfoPlist.strings */; };
 		BDC39F9418C7C1B6007EA5FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC39F9318C7C1B6007EA5FC /* main.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BDB72CE118C7CE0800ABA136 /* WAVECreationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVECreationDelegate.h; sourceTree = "<group>"; };
+		BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAVECreationDelegate.m; sourceTree = "<group>"; };
 		BDC39F8418C7C1B6007EA5FC /* Waves.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waves.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BDC39F8A18C7C1B6007EA5FC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 			children = (
 				BDC39F9918C7C1B6007EA5FC /* WAVEAppDelegate.h */,
 				BDC39F9A18C7C1B6007EA5FC /* WAVEAppDelegate.m */,
+				BDB72CE118C7CE0800ABA136 /* WAVECreationDelegate.h */,
+				BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */,
 				BDC39F9C18C7C1B6007EA5FC /* MainMenu.xib */,
 				BDC39F9F18C7C1B6007EA5FC /* Images.xcassets */,
 				BDC39F8E18C7C1B6007EA5FC /* Supporting Files */,
@@ -253,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB72CE318C7CE0800ABA136 /* WAVECreationDelegate.m in Sources */,
 				BDC39F9418C7C1B6007EA5FC /* main.m in Sources */,
 				BDC39F9B18C7C1B6007EA5FC /* WAVEAppDelegate.m in Sources */,
 			);
@@ -465,6 +471,7 @@
 				BDC39FB718C7C1B6007EA5FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDC39FB818C7C1B6007EA5FC /* Build configuration list for PBXNativeTarget "WavesTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +480,7 @@
 				BDC39FBA18C7C1B6007EA5FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

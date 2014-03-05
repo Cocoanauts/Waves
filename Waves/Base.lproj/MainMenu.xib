@@ -679,6 +679,13 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="B8v-kM-6R4" name="value" keyPath="self.name" id="xNP-ly-sR4">
+                                <dictionary key="options">
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                </dictionary>
+                            </binding>
+                        </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uby-IY-QtV">
                         <rect key="frame" x="159" y="90" width="33" height="17"/>
@@ -706,6 +713,13 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="B8v-kM-6R4" name="value" keyPath="self.url" id="Ecq-D0-Mae">
+                                <dictionary key="options">
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                </dictionary>
+                            </binding>
+                        </connections>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-Cb-RFS">
                         <rect key="frame" x="350" y="13" width="81" height="32"/>
@@ -714,6 +728,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="create:" target="B8v-kM-6R4" id="pq7-WQ-DCw"/>
+                        </connections>
                     </button>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cZ-aU-KyM">
                         <rect key="frame" x="197" y="55" width="231" height="29"/>
@@ -729,6 +746,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <binding destination="B8v-kM-6R4" name="selectedValue" keyPath="self.location" id="r9a-pl-Yd4"/>
+                        </connections>
                     </popUpButton>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFQ-6A-sWx">
                         <rect key="frame" x="17" y="56" width="84" height="84"/>
@@ -737,12 +757,17 @@
                     </imageView>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="delegate" destination="B8v-kM-6R4" id="OHy-Fm-NAf"/>
+            </connections>
         </window>
         <customObject id="494" customClass="WAVEAppDelegate">
             <connections>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
+        <customObject id="B8v-kM-6R4" customClass="WAVECreationDelegate"/>
         <customObject id="420" customClass="NSFontManager"/>
+        <userDefaultsController representsSharedInstance="YES" id="XSY-lR-w1L"/>
     </objects>
 </document>
