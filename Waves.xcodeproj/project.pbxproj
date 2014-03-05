@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BDC39F8818C7C1B6007EA5FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */; };
+		BDC39F9218C7C1B6007EA5FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDC39F9018C7C1B6007EA5FC /* InfoPlist.strings */; };
+		BDC39F9418C7C1B6007EA5FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC39F9318C7C1B6007EA5FC /* main.m */; };
+		BDC39F9818C7C1B6007EA5FC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BDC39F9618C7C1B6007EA5FC /* Credits.rtf */; };
+		BDC39F9B18C7C1B6007EA5FC /* WAVEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC39F9A18C7C1B6007EA5FC /* WAVEAppDelegate.m */; };
+		BDC39F9E18C7C1B6007EA5FC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC39F9C18C7C1B6007EA5FC /* MainMenu.xib */; };
+		BDC39FA018C7C1B6007EA5FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC39F9F18C7C1B6007EA5FC /* Images.xcassets */; };
+		BDC39FA718C7C1B6007EA5FC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC39FA618C7C1B6007EA5FC /* XCTest.framework */; };
+		BDC39FA818C7C1B6007EA5FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */; };
+		BDC39FB018C7C1B6007EA5FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDC39FAE18C7C1B6007EA5FC /* InfoPlist.strings */; };
+		BDC39FB218C7C1B6007EA5FC /* WavesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC39FB118C7C1B6007EA5FC /* WavesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDC39FA918C7C1B6007EA5FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDC39F7C18C7C1B6007EA5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDC39F8318C7C1B6007EA5FC;
+			remoteInfo = Waves;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BDC39F8418C7C1B6007EA5FC /* Waves.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waves.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BDC39F8A18C7C1B6007EA5FC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BDC39F8B18C7C1B6007EA5FC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BDC39F8C18C7C1B6007EA5FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BDC39F8F18C7C1B6007EA5FC /* Waves-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Waves-Info.plist"; sourceTree = "<group>"; };
+		BDC39F9118C7C1B6007EA5FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BDC39F9318C7C1B6007EA5FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BDC39F9518C7C1B6007EA5FC /* Waves-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Waves-Prefix.pch"; sourceTree = "<group>"; };
+		BDC39F9718C7C1B6007EA5FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		BDC39F9918C7C1B6007EA5FC /* WAVEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAVEAppDelegate.h; sourceTree = "<group>"; };
+		BDC39F9A18C7C1B6007EA5FC /* WAVEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAVEAppDelegate.m; sourceTree = "<group>"; };
+		BDC39F9D18C7C1B6007EA5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BDC39F9F18C7C1B6007EA5FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BDC39FA518C7C1B6007EA5FC /* WavesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WavesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC39FA618C7C1B6007EA5FC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BDC39FAD18C7C1B6007EA5FC /* WavesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WavesTests-Info.plist"; sourceTree = "<group>"; };
+		BDC39FAF18C7C1B6007EA5FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BDC39FB118C7C1B6007EA5FC /* WavesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WavesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDC39F8118C7C1B6007EA5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC39F8818C7C1B6007EA5FC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDC39FA218C7C1B6007EA5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC39FA818C7C1B6007EA5FC /* Cocoa.framework in Frameworks */,
+				BDC39FA718C7C1B6007EA5FC /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDC39F7B18C7C1B6007EA5FC = {
+			isa = PBXGroup;
+			children = (
+				BDC39F8D18C7C1B6007EA5FC /* Waves */,
+				BDC39FAB18C7C1B6007EA5FC /* WavesTests */,
+				BDC39F8618C7C1B6007EA5FC /* Frameworks */,
+				BDC39F8518C7C1B6007EA5FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDC39F8518C7C1B6007EA5FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDC39F8418C7C1B6007EA5FC /* Waves.app */,
+				BDC39FA518C7C1B6007EA5FC /* WavesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDC39F8618C7C1B6007EA5FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */,
+				BDC39FA618C7C1B6007EA5FC /* XCTest.framework */,
+				BDC39F8918C7C1B6007EA5FC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDC39F8918C7C1B6007EA5FC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDC39F8A18C7C1B6007EA5FC /* AppKit.framework */,
+				BDC39F8B18C7C1B6007EA5FC /* CoreData.framework */,
+				BDC39F8C18C7C1B6007EA5FC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BDC39F8D18C7C1B6007EA5FC /* Waves */ = {
+			isa = PBXGroup;
+			children = (
+				BDC39F9918C7C1B6007EA5FC /* WAVEAppDelegate.h */,
+				BDC39F9A18C7C1B6007EA5FC /* WAVEAppDelegate.m */,
+				BDC39F9C18C7C1B6007EA5FC /* MainMenu.xib */,
+				BDC39F9F18C7C1B6007EA5FC /* Images.xcassets */,
+				BDC39F8E18C7C1B6007EA5FC /* Supporting Files */,
+			);
+			path = Waves;
+			sourceTree = "<group>";
+		};
+		BDC39F8E18C7C1B6007EA5FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDC39F8F18C7C1B6007EA5FC /* Waves-Info.plist */,
+				BDC39F9018C7C1B6007EA5FC /* InfoPlist.strings */,
+				BDC39F9318C7C1B6007EA5FC /* main.m */,
+				BDC39F9518C7C1B6007EA5FC /* Waves-Prefix.pch */,
+				BDC39F9618C7C1B6007EA5FC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDC39FAB18C7C1B6007EA5FC /* WavesTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDC39FB118C7C1B6007EA5FC /* WavesTests.m */,
+				BDC39FAC18C7C1B6007EA5FC /* Supporting Files */,
+			);
+			path = WavesTests;
+			sourceTree = "<group>";
+		};
+		BDC39FAC18C7C1B6007EA5FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDC39FAD18C7C1B6007EA5FC /* WavesTests-Info.plist */,
+				BDC39FAE18C7C1B6007EA5FC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDC39F8318C7C1B6007EA5FC /* Waves */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDC39FB518C7C1B6007EA5FC /* Build configuration list for PBXNativeTarget "Waves" */;
+			buildPhases = (
+				BDC39F8018C7C1B6007EA5FC /* Sources */,
+				BDC39F8118C7C1B6007EA5FC /* Frameworks */,
+				BDC39F8218C7C1B6007EA5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Waves;
+			productName = Waves;
+			productReference = BDC39F8418C7C1B6007EA5FC /* Waves.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDC39FA418C7C1B6007EA5FC /* WavesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDC39FB818C7C1B6007EA5FC /* Build configuration list for PBXNativeTarget "WavesTests" */;
+			buildPhases = (
+				BDC39FA118C7C1B6007EA5FC /* Sources */,
+				BDC39FA218C7C1B6007EA5FC /* Frameworks */,
+				BDC39FA318C7C1B6007EA5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDC39FAA18C7C1B6007EA5FC /* PBXTargetDependency */,
+			);
+			name = WavesTests;
+			productName = WavesTests;
+			productReference = BDC39FA518C7C1B6007EA5FC /* WavesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDC39F7C18C7C1B6007EA5FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WAVE;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Hyper;
+				TargetAttributes = {
+					BDC39FA418C7C1B6007EA5FC = {
+						TestTargetID = BDC39F8318C7C1B6007EA5FC;
+					};
+				};
+			};
+			buildConfigurationList = BDC39F7F18C7C1B6007EA5FC /* Build configuration list for PBXProject "Waves" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDC39F7B18C7C1B6007EA5FC;
+			productRefGroup = BDC39F8518C7C1B6007EA5FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDC39F8318C7C1B6007EA5FC /* Waves */,
+				BDC39FA418C7C1B6007EA5FC /* WavesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDC39F8218C7C1B6007EA5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC39F9218C7C1B6007EA5FC /* InfoPlist.strings in Resources */,
+				BDC39FA018C7C1B6007EA5FC /* Images.xcassets in Resources */,
+				BDC39F9818C7C1B6007EA5FC /* Credits.rtf in Resources */,
+				BDC39F9E18C7C1B6007EA5FC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDC39FA318C7C1B6007EA5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC39FB018C7C1B6007EA5FC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDC39F8018C7C1B6007EA5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC39F9418C7C1B6007EA5FC /* main.m in Sources */,
+				BDC39F9B18C7C1B6007EA5FC /* WAVEAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDC39FA118C7C1B6007EA5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC39FB218C7C1B6007EA5FC /* WavesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDC39FAA18C7C1B6007EA5FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDC39F8318C7C1B6007EA5FC /* Waves */;
+			targetProxy = BDC39FA918C7C1B6007EA5FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BDC39F9018C7C1B6007EA5FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC39F9118C7C1B6007EA5FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BDC39F9618C7C1B6007EA5FC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC39F9718C7C1B6007EA5FC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		BDC39F9C18C7C1B6007EA5FC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC39F9D18C7C1B6007EA5FC /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		BDC39FAE18C7C1B6007EA5FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC39FAF18C7C1B6007EA5FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDC39FB318C7C1B6007EA5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BDC39FB418C7C1B6007EA5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BDC39FB618C7C1B6007EA5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Waves/Waves-Prefix.pch";
+				INFOPLIST_FILE = "Waves/Waves-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BDC39FB718C7C1B6007EA5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Waves/Waves-Prefix.pch";
+				INFOPLIST_FILE = "Waves/Waves-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BDC39FB918C7C1B6007EA5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Waves.app/Contents/MacOS/Waves";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Waves/Waves-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WavesTests/WavesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BDC39FBA18C7C1B6007EA5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Waves.app/Contents/MacOS/Waves";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Waves/Waves-Prefix.pch";
+				INFOPLIST_FILE = "WavesTests/WavesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDC39F7F18C7C1B6007EA5FC /* Build configuration list for PBXProject "Waves" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC39FB318C7C1B6007EA5FC /* Debug */,
+				BDC39FB418C7C1B6007EA5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDC39FB518C7C1B6007EA5FC /* Build configuration list for PBXNativeTarget "Waves" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC39FB618C7C1B6007EA5FC /* Debug */,
+				BDC39FB718C7C1B6007EA5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BDC39FB818C7C1B6007EA5FC /* Build configuration list for PBXNativeTarget "WavesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC39FB918C7C1B6007EA5FC /* Debug */,
+				BDC39FBA18C7C1B6007EA5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDC39F7C18C7C1B6007EA5FC /* Project object */;
+}
