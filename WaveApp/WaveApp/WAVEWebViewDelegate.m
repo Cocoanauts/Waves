@@ -10,7 +10,7 @@
 
 @implementation WAVEWebViewDelegate
 
-static NSString * const kMainURL = @"http://www.facebook.com";
+static NSString * const kMainURL = @"http://www.facebook.com/messages";
 
 @synthesize webView;
 
