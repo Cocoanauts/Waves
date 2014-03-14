@@ -443,6 +443,10 @@
 				GCC_PREFIX_HEADER = "Waves/Waves-Prefix.pch";
 				INFOPLIST_FILE = "Waves/Waves-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-objc-missing-property-synthesis",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -456,6 +460,10 @@
 				GCC_PREFIX_HEADER = "Waves/Waves-Prefix.pch";
 				INFOPLIST_FILE = "Waves/Waves-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-objc-missing-property-synthesis",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

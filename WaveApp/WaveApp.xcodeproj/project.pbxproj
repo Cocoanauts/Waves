@@ -405,6 +405,10 @@
 				GCC_PREFIX_HEADER = "WaveApp/WaveApp-Prefix.pch";
 				INFOPLIST_FILE = "WaveApp/WaveApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-objc-missing-property-synthesis",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,6 +422,10 @@
 				GCC_PREFIX_HEADER = "WaveApp/WaveApp-Prefix.pch";
 				INFOPLIST_FILE = "WaveApp/WaveApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-objc-missing-property-synthesis",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
