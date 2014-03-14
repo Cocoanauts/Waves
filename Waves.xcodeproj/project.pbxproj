@@ -22,6 +22,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BDAE964518C8D8810063CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDAE964018C8D8800063CC16 /* WaveApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BDAE960918C8D8800063CC16;
+			remoteInfo = WaveApp;
+		};
+		BDAE964718C8D8810063CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDAE964018C8D8800063CC16 /* WaveApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BDAE962A18C8D8800063CC16;
+			remoteInfo = WaveAppTests;
+		};
 		BDC39FA918C7C1B6007EA5FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BDC39F7C18C7C1B6007EA5FC /* Project object */;
@@ -32,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BDAE964018C8D8800063CC16 /* WaveApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WaveApp.xcodeproj; path = WaveApp/WaveApp.xcodeproj; sourceTree = "<group>"; };
 		BDB72CE118C7CE0800ABA136 /* WAVECreationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVECreationDelegate.h; sourceTree = "<group>"; };
 		BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAVECreationDelegate.m; sourceTree = "<group>"; };
 		BDC39F8418C7C1B6007EA5FC /* Waves.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waves.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,9 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDAE964118C8D8800063CC16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDAE964618C8D8810063CC16 /* WaveApp.app */,
+				BDAE964818C8D8810063CC16 /* WaveAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BDC39F7B18C7C1B6007EA5FC = {
 			isa = PBXGroup;
 			children = (
+				BDAE964018C8D8800063CC16 /* WaveApp.xcodeproj */,
 				BDC39F8D18C7C1B6007EA5FC /* Waves */,
 				BDC39FAB18C7C1B6007EA5FC /* WavesTests */,
 				BDC39F8618C7C1B6007EA5FC /* Frameworks */,
@@ -223,6 +248,12 @@
 			mainGroup = BDC39F7B18C7C1B6007EA5FC;
 			productRefGroup = BDC39F8518C7C1B6007EA5FC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BDAE964118C8D8800063CC16 /* Products */;
+					ProjectRef = BDAE964018C8D8800063CC16 /* WaveApp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BDC39F8318C7C1B6007EA5FC /* Waves */,
@@ -230,6 +261,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BDAE964618C8D8810063CC16 /* WaveApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = WaveApp.app;
+			remoteRef = BDAE964518C8D8810063CC16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDAE964818C8D8810063CC16 /* WaveAppTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = WaveAppTests.xctest;
+			remoteRef = BDAE964718C8D8810063CC16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BDC39F8218C7C1B6007EA5FC /* Resources */ = {
