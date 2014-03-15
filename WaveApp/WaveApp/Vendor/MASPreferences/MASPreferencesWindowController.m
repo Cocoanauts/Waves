@@ -2,15 +2,22 @@
 
 NSString *const kMASPreferencesWindowControllerDidChangeViewNotification = @"MASPreferencesWindowControllerDidChangeViewNotification";
 
-static NSString *const kMASPreferencesFrameTopLeftKey = @"MASPreferences Frame Top Left";
-static NSString *const kMASPreferencesSelectedViewKey = @"MASPreferences Selected Identifier View";
+static NSString * const kMASPreferencesFrameTopLeftKey = @"MASPreferences Frame Top Left";
+static NSString * const kMASPreferencesSelectedViewKey = @"MASPreferences Selected Identifier View";
 
-static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
+static NSString * PreferencesKeyForViewBounds (NSString *identifier)
 {
     return [NSString stringWithFormat:@"MASPreferences %@ Frame", identifier];
 }
 
 @interface MASPreferencesWindowController () // Private
+{
+    NSMutableArray *_viewControllers;
+    NSMutableDictionary *_minimumViewRects;
+    NSString *_title;
+    NSViewController <MASPreferencesViewController> *_selectedViewController;
+	IBOutlet NSToolbar *toolbar;
+}
 
 - (NSViewController <MASPreferencesViewController> *)viewControllerForIdentifier:(NSString *)identifier;
 
@@ -39,9 +46,6 @@ static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
     if ((self = [super initWithWindowNibName:@"MASPreferencesWindow"]))
     {
 		_viewControllers = [NSMutableArray arrayWithArray: viewControllers];
-#if !__has_feature(objc_arc)
-        _viewControllers = [_viewControllers retain];
-#endif
         _minimumViewRects = [[NSMutableDictionary alloc] init];
         _title = [title copy];
     }
@@ -52,13 +56,6 @@ static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[self window] setDelegate:nil];
-#if !__has_feature(objc_arc)
-    [_viewControllers release];
-    [_selectedViewController release];
-    [_minimumViewRects release];
-    [_title release];
-    [super dealloc];
-#endif
 }
 
 - (void)addViewController: (NSViewController <MASPreferencesViewController> *) viewController
@@ -170,9 +167,6 @@ static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
         toolbarItem.target = self;
         toolbarItem.action = @selector(toolbarItemDidClick:);
     }
-#if !__has_feature(objc_arc)
-    [toolbarItem autorelease];
-#endif
     return toolbarItem;
 }
 
@@ -229,17 +223,10 @@ static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
             return;
         }
 
-#if __has_feature(objc_arc)
         [self.window setContentView:[[NSView alloc] init]];
-#else
-        [self.window setContentView:[[[NSView alloc] init] autorelease]];
-#endif
         if ([_selectedViewController respondsToSelector:@selector(viewDidDisappear)])
             [_selectedViewController viewDidDisappear];
 
-#if !__has_feature(objc_arc)
-        [_selectedViewController release];
-#endif
         _selectedViewController = nil;
     }
 
@@ -293,11 +280,7 @@ static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
 
     [self.window setFrame:newFrame display:YES animate:[self.window isVisible]];
     
-#if __has_feature(objc_arc)
     _selectedViewController = controller;
-#else
-    _selectedViewController = [controller retain];
-#endif
     if ([controller respondsToSelector:@selector(viewWillAppear)])
         [controller viewWillAppear];
     
