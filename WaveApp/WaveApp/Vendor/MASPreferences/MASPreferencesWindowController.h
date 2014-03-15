@@ -17,14 +17,6 @@ __attribute__((__visibility__("default")))
 #else
 @interface MASPreferencesWindowController : NSWindowController
 #endif
-{
-@private
-    NSMutableArray *_viewControllers;
-    NSMutableDictionary *_minimumViewRects;
-    NSString *_title;
-    NSViewController <MASPreferencesViewController> *_selectedViewController;
-	IBOutlet NSToolbar *toolbar;
-}
 
 @property (nonatomic, readonly) NSMutableArray *viewControllers;
 @property (nonatomic, readonly) NSUInteger indexOfSelectedController;
