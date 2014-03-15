@@ -11,6 +11,7 @@
 		142AC83A18D4B912009EB300 /* WAVEGeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142AC83818D4B912009EB300 /* WAVEGeneralPreferencesView.xib */; };
 		142AC83E18D4B928009EB300 /* WAVECSSPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AC83C18D4B928009EB300 /* WAVECSSPreferencesViewController.m */; };
 		142AC83F18D4B928009EB300 /* WAVECSSPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142AC83D18D4B928009EB300 /* WAVECSSPreferencesView.xib */; };
+		1433C85618D4FE6F00CE6D25 /* preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1433C85518D4FE6F00CE6D25 /* preferences.plist */; };
 		14B1988218D48AE0007BD001 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 14B1987C18D48AE0007BD001 /* LICENSE.md */; };
 		14B1988318D48AE0007BD001 /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B1987E18D48AE0007BD001 /* MASPreferencesWindow.xib */; };
 		14B1988418D48AE0007BD001 /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1988018D48AE0007BD001 /* MASPreferencesWindowController.m */; };
@@ -48,6 +49,7 @@
 		142AC83B18D4B928009EB300 /* WAVECSSPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVECSSPreferencesViewController.h; sourceTree = "<group>"; };
 		142AC83C18D4B928009EB300 /* WAVECSSPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAVECSSPreferencesViewController.m; sourceTree = "<group>"; };
 		142AC83D18D4B928009EB300 /* WAVECSSPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WAVECSSPreferencesView.xib; sourceTree = "<group>"; };
+		1433C85518D4FE6F00CE6D25 /* preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = preferences.plist; sourceTree = "<group>"; };
 		14B1987C18D48AE0007BD001 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		14B1987D18D48AE0007BD001 /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
 		14B1987E18D48AE0007BD001 /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				142AC83B18D4B928009EB300 /* WAVECSSPreferencesViewController.h */,
 				142AC83C18D4B928009EB300 /* WAVECSSPreferencesViewController.m */,
 				142AC83D18D4B928009EB300 /* WAVECSSPreferencesView.xib */,
+				1433C85518D4FE6F00CE6D25 /* preferences.plist */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				142AC83A18D4B912009EB300 /* WAVEGeneralPreferencesView.xib in Resources */,
 				14B1988518D48AE0007BD001 /* README.md in Resources */,
 				BDAE962518C8D8800063CC16 /* Images.xcassets in Resources */,
+				1433C85618D4FE6F00CE6D25 /* preferences.plist in Resources */,
 				BDAE961D18C8D8800063CC16 /* Credits.rtf in Resources */,
 				BDAE962318C8D8800063CC16 /* MainMenu.xib in Resources */,
 			);

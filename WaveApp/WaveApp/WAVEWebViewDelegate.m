@@ -9,18 +9,35 @@
 #import "WAVEWebViewDelegate.h"
 
 @interface WAVEWebViewDelegate ()
+@property (nonatomic, strong) NSDictionary *preferencesDict;
 @end
 
 @implementation WAVEWebViewDelegate
 
-static NSString * const kMainURL = @"http://www.facebook.com/messages";
+- (NSDictionary *)preferencesDict
+{
+    if (_preferencesDict) {
+        return _preferencesDict;
+    }
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"preferences" ofType:@"plist"];
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+    NSString *errorDesc = nil;
+    NSPropertyListFormat format;
+    _preferencesDict = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
+    if (!_preferencesDict) {
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
+    }
+    return _preferencesDict;
+}
 
 - (void)awakeFromNib
 {
     self.webView.frameLoadDelegate = self;
-    [self.webView setPolicyDelegate:self];
-    [self.webView setAcceptsTouchEvents:YES];
-	[self.webView setMainFrameURL:kMainURL];
+    self.webView.policyDelegate = self;
+    self.webView.acceptsTouchEvents = YES;
+    NSString *mainURL = [self.preferencesDict objectForKey:@"mainURL"];
+    self.webView.mainFrameURL = mainURL;
 }
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
@@ -29,17 +46,8 @@ static NSString * const kMainURL = @"http://www.facebook.com/messages";
     DOMElement *styleElement = [domDocument createElement:@"style"];
     [styleElement setAttribute:@"type" value:@"text/css"];
     
-    NSString *string = [NSString stringWithFormat:@"#fbDockChatBuddylistNub,"
-                                                    "#pagelet_bluebar,"
-                                                    "#leftColContainer,"
-                                                    "#rightCol,"
-                                                    "#headerArea,"
-                                                    "._2nd,"
-                                                    "._3j5,"
-                                                    "#pagelet_chat { display: none !important; }"
-                                                    "#pagelet_group_mall { padding: 0px 5px !important; }"
-                                                    ".storyContent .uiUfi { width: 100% !important; }"];
-    
+
+    NSString *string = [self.preferencesDict objectForKey:@"CSS"];
     DOMText *cssText = [domDocument createTextNode:string];
     [styleElement appendChild:cssText];
     DOMElement *headElement = (DOMElement*)[[domDocument getElementsByTagName:@"head"] item:0];

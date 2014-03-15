@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mainURL</key>
+	<string>http://www.facebook.com/messages</string>
+	<key>CSS</key>
+	<string>#fbDockChatBuddylistNub,
+#pagelet_bluebar,
+#leftColContainer,
+#rightCol,
+#headerArea,
+._2nd,
+._3j5,
+#pagelet_chat { display: none !important; } 
+#pagelet_group_mall { padding: 0px 5px !important; }
+.storyContent .uiUfi { width: 100% !important; }</string>
+</dict>
+</plist>

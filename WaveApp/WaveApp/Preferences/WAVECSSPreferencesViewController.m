@@ -16,7 +16,10 @@
 
 - (id)init
 {
-    return [super initWithNibName:@"WAVECSSPreferencesView" bundle:nil];
+    self = [super initWithNibName:@"WAVECSSPreferencesView" bundle:nil];
+    if (self) {
+    }
+    return self;
 }
 
 #pragma mark - MASPreferencesViewController
