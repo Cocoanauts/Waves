@@ -445,6 +445,7 @@
 				WARNING_CFLAGS = (
 					"-Weverything",
 					"-Wno-objc-missing-property-synthesis",
+					"-Wno-gnu-conditional-omitted-operand",
 				);
 				WRAPPER_EXTENSION = app;
 			};
@@ -462,6 +463,7 @@
 				WARNING_CFLAGS = (
 					"-Weverything",
 					"-Wno-objc-missing-property-synthesis",
+					"-Wno-gnu-conditional-omitted-operand",
 				);
 				WRAPPER_EXTENSION = app;
 			};

@@ -1,5 +1,8 @@
 #import "MASPreferencesWindowController.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdirect-ivar-access"
+
 NSString *const kMASPreferencesWindowControllerDidChangeViewNotification = @"MASPreferencesWindowControllerDidChangeViewNotification";
 
 static NSString * const kMASPreferencesFrameTopLeftKey = @"MASPreferences Frame Top Left";
@@ -21,7 +24,7 @@ static NSString * PreferencesKeyForViewBounds (NSString *identifier)
 
 - (NSViewController <MASPreferencesViewController> *)viewControllerForIdentifier:(NSString *)identifier;
 
-@property (readonly) NSArray *toolbarItemIdentifiers;
+@property (nonatomic, readonly) NSArray *toolbarItemIdentifiers;
 @property (nonatomic, retain) NSViewController <MASPreferencesViewController> *selectedViewController;
 
 @end
@@ -340,3 +343,5 @@ static NSString * PreferencesKeyForViewBounds (NSString *identifier)
 }
 
 @end
+
+#pragma clang diagnostic pop
