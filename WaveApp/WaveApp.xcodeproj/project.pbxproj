@@ -129,11 +129,11 @@
 				BDE59F6118D332120085F727 /* WAVEWebView.m */,
 				BDAE961E18C8D8800063CC16 /* WAVEAppDelegate.h */,
 				BDAE961F18C8D8800063CC16 /* WAVEAppDelegate.m */,
+				BDAE964B18C8D9780063CC16 /* WAVEWebViewDelegate.h */,
+				BDAE964C18C8D9780063CC16 /* WAVEWebViewDelegate.m */,
 				BDAE962118C8D8800063CC16 /* MainMenu.xib */,
 				BDAE962418C8D8800063CC16 /* Images.xcassets */,
 				BDAE961318C8D8800063CC16 /* Supporting Files */,
-				BDAE964B18C8D9780063CC16 /* WAVEWebViewDelegate.h */,
-				BDAE964C18C8D9780063CC16 /* WAVEWebViewDelegate.m */,
 			);
 			path = WaveApp;
 			sourceTree = "<group>";
