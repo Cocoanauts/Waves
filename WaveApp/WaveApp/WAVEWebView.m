@@ -29,19 +29,6 @@ static NSString * const kEnableSwipe = @"AppleEnableSwipeNavigateWithScrolls";
 
 #pragma mark Event handlers
 
-- (void)swipeWithEvent:(NSEvent *)event
-{
-    NSLog(@"%s", __FUNCTION__);
-    CGFloat deltaX = [event deltaX];
-    if (deltaX > 0) {
-        NSLog(@"goForward %@ ", self);
-        [self goForward];
-    } else if (deltaX < 0) {
-        NSLog(@"goBack%@ ", self);
-        [self goBack];
-    }
-}
-
 - (BOOL)twoFingerGestures
 {
 	return [[NSUserDefaults standardUserDefaults] boolForKey:kEnableSwipe];

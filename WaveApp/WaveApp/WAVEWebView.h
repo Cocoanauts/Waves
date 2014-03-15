@@ -13,7 +13,6 @@
 @property (nonatomic, retain) NSMutableDictionary *gestures;
 
 - (BOOL)acceptsFirstResponder;
-- (void)swipeWithEvent:(NSEvent *)event;
 - (BOOL)twoFingerGestures;
 - (void)beginGestureWithEvent:(NSEvent *)event;
 - (void)endGestureWithEvent:(NSEvent *)event;
