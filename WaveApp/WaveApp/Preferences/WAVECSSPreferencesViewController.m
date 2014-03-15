@@ -31,7 +31,7 @@
     NSDictionary *preferencesDict = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
     if (preferencesDict) {
         self.textView.string = [preferencesDict objectForKey:@"CSS"];
-    }    
+    }
 }
 
 #pragma mark - MASPreferencesViewController
