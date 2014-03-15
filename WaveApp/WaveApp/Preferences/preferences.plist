@@ -5,15 +5,6 @@
 	<key>mainURL</key>
 	<string>http://www.facebook.com/messages</string>
 	<key>CSS</key>
-	<string>#fbDockChatBuddylistNub,
-#pagelet_bluebar,
-#leftColContainer,
-#rightCol,
-#headerArea,
-._2nd,
-._3j5,
-#pagelet_chat { display: none !important; } 
-#pagelet_group_mall { padding: 0px 5px !important; }
-.storyContent .uiUfi { width: 100% !important; }</string>
+	<string></string>
 </dict>
 </plist>

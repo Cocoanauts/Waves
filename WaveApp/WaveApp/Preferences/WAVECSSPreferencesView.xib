@@ -6,6 +6,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="WAVECSSPreferencesViewController">
             <connections>
+                <outlet property="textView" destination="AjR-UE-A2f" id="H07-Z6-85h"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -31,6 +32,9 @@
                                 <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="358" height="258"/>
                                 <size key="maxSize" width="613" height="10000000"/>
+                                <connections>
+                                    <outlet property="delegate" destination="-2" id="BqZ-Q3-XH1"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
