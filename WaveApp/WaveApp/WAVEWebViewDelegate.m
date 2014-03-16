@@ -8,18 +8,52 @@
 
 #import "WAVEWebViewDelegate.h"
 
+@interface WAVEWebViewDelegate ()
+@property (nonatomic, strong) NSDictionary *preferencesDict;
+@end
+
 @implementation WAVEWebViewDelegate
 
-static NSString * const kMainURL = @"http://www.facebook.com";
-
-@synthesize webView;
+- (NSDictionary *)preferencesDict
+{
+    if (_preferencesDict) {
+        return _preferencesDict;
+    }
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"preferences" ofType:@"plist"];
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+    NSString *errorDesc = nil;
+    NSPropertyListFormat format;
+    _preferencesDict = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
+    if (!_preferencesDict) {
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
+    }
+    return _preferencesDict;
+}
 
 - (void)awakeFromNib
 {
-    [self.webView setPolicyDelegate:self];
-    [self.webView setAcceptsTouchEvents:YES];
-	[self.webView setMainFrameURL:kMainURL];
+    self.webView.frameLoadDelegate = self;
+    self.webView.policyDelegate = self;
+    self.webView.acceptsTouchEvents = YES;
+    NSString *mainURL = [self.preferencesDict objectForKey:@"mainURL"];
+    self.webView.mainFrameURL = mainURL;
 }
+
+- (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
+{
+    DOMDocument *domDocument = [sender mainFrameDocument];    
+    DOMElement *styleElement = [domDocument createElement:@"style"];
+    [styleElement setAttribute:@"type" value:@"text/css"];
+    
+
+    NSString *string = [self.preferencesDict objectForKey:@"CSS"];
+    DOMText *cssText = [domDocument createTextNode:string];
+    [styleElement appendChild:cssText];
+    DOMElement *headElement = (DOMElement*)[[domDocument getElementsByTagName:@"head"] item:0];
+    [headElement appendChild:styleElement];
+}
+
 
 #pragma mark Policy delegate
 
@@ -30,7 +64,8 @@ static NSString * const kMainURL = @"http://www.facebook.com";
     }
 }
 
-- (void)webView:(WebView *)sender decidePolicyForNewWindowAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request newFrameName:(NSString *)frameName decisionListener:(id<WebPolicyDecisionListener>)listener {
+- (void)webView:(WebView *)sender decidePolicyForNewWindowAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request newFrameName:(NSString *)frameName decisionListener:(id<WebPolicyDecisionListener>)listener
+{
     [[NSWorkspace sharedWorkspace] openURL:[actionInformation objectForKey:WebActionOriginalURLKey]];
     [listener ignore];
 }
