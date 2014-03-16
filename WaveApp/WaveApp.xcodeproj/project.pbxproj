@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1428CA3E18D5CC3300093046 /* WAVEJavaScriptPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1428CA3C18D5CC3300093046 /* WAVEJavaScriptPreferencesViewController.m */; };
+		1428CA3F18D5CC3300093046 /* WAVEJavaScriptPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1428CA3D18D5CC3300093046 /* WAVEJavaScriptPreferencesView.xib */; };
+		1428CA4118D5CDBA00093046 /* preferences-sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1428CA4018D5CDBA00093046 /* preferences-sample.plist */; };
 		142AC83918D4B912009EB300 /* WAVEGeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AC83718D4B912009EB300 /* WAVEGeneralPreferencesViewController.m */; };
 		142AC83A18D4B912009EB300 /* WAVEGeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142AC83818D4B912009EB300 /* WAVEGeneralPreferencesView.xib */; };
 		142AC83E18D4B928009EB300 /* WAVECSSPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142AC83C18D4B928009EB300 /* WAVECSSPreferencesViewController.m */; };
@@ -43,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1428CA3B18D5CC3300093046 /* WAVEJavaScriptPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVEJavaScriptPreferencesViewController.h; sourceTree = "<group>"; };
+		1428CA3C18D5CC3300093046 /* WAVEJavaScriptPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAVEJavaScriptPreferencesViewController.m; sourceTree = "<group>"; };
+		1428CA3D18D5CC3300093046 /* WAVEJavaScriptPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WAVEJavaScriptPreferencesView.xib; sourceTree = "<group>"; };
+		1428CA4018D5CDBA00093046 /* preferences-sample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "preferences-sample.plist"; sourceTree = "<group>"; };
 		142AC83618D4B912009EB300 /* WAVEGeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVEGeneralPreferencesViewController.h; sourceTree = "<group>"; };
 		142AC83718D4B912009EB300 /* WAVEGeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAVEGeneralPreferencesViewController.m; sourceTree = "<group>"; };
 		142AC83818D4B912009EB300 /* WAVEGeneralPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WAVEGeneralPreferencesView.xib; sourceTree = "<group>"; };
@@ -113,7 +120,11 @@
 				142AC83B18D4B928009EB300 /* WAVECSSPreferencesViewController.h */,
 				142AC83C18D4B928009EB300 /* WAVECSSPreferencesViewController.m */,
 				142AC83D18D4B928009EB300 /* WAVECSSPreferencesView.xib */,
+				1428CA3B18D5CC3300093046 /* WAVEJavaScriptPreferencesViewController.h */,
+				1428CA3C18D5CC3300093046 /* WAVEJavaScriptPreferencesViewController.m */,
+				1428CA3D18D5CC3300093046 /* WAVEJavaScriptPreferencesView.xib */,
 				1433C85518D4FE6F00CE6D25 /* preferences.plist */,
+				1428CA4018D5CDBA00093046 /* preferences-sample.plist */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -308,6 +319,7 @@
 				14B1988218D48AE0007BD001 /* LICENSE.md in Resources */,
 				BDAE961718C8D8800063CC16 /* InfoPlist.strings in Resources */,
 				142AC83F18D4B928009EB300 /* WAVECSSPreferencesView.xib in Resources */,
+				1428CA3F18D5CC3300093046 /* WAVEJavaScriptPreferencesView.xib in Resources */,
 				14B1988318D48AE0007BD001 /* MASPreferencesWindow.xib in Resources */,
 				142AC83A18D4B912009EB300 /* WAVEGeneralPreferencesView.xib in Resources */,
 				14B1988518D48AE0007BD001 /* README.md in Resources */,
@@ -315,6 +327,7 @@
 				1433C85618D4FE6F00CE6D25 /* preferences.plist in Resources */,
 				BDAE961D18C8D8800063CC16 /* Credits.rtf in Resources */,
 				BDAE962318C8D8800063CC16 /* MainMenu.xib in Resources */,
+				1428CA4118D5CDBA00093046 /* preferences-sample.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +353,7 @@
 				142AC83E18D4B928009EB300 /* WAVECSSPreferencesViewController.m in Sources */,
 				14B1988418D48AE0007BD001 /* MASPreferencesWindowController.m in Sources */,
 				BDAE962018C8D8800063CC16 /* WAVEAppDelegate.m in Sources */,
+				1428CA3E18D5CC3300093046 /* WAVEJavaScriptPreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import "MASPreferencesWindowController.h"
 #import "WAVEGeneralPreferencesViewController.h"
 #import "WAVECSSPreferencesViewController.h"
+#import "WAVEJavaScriptPreferencesViewController.h"
 
 @interface WAVEAppDelegate ()
 @property (nonatomic, strong) NSWindowController *preferencesWindowController;
@@ -27,8 +28,9 @@
 
     NSViewController *generalController = [[WAVEGeneralPreferencesViewController alloc] init];
     NSViewController *cssController = [[WAVECSSPreferencesViewController alloc] init];
+    NSViewController *javaScriptController = [[WAVEJavaScriptPreferencesViewController alloc] init];
     NSString *title = NSLocalizedString(@"Preferences", @"Title for Preferences Window");
-    _preferencesWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:@[generalController, cssController] title:title];
+    _preferencesWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:@[generalController, cssController, javaScriptController] title:title];
     return _preferencesWindowController;
 }
 

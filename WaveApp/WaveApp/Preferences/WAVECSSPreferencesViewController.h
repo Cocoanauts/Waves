@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Hyper. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "MASPreferencesViewController.h"
 
-@interface WAVECSSPreferencesViewController : NSViewController
+@interface WAVECSSPreferencesViewController : NSViewController <MASPreferencesViewController>
 
 @end
