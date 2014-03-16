@@ -8,9 +8,11 @@
 
 #import "WAVECreationDelegate.h"
 
+static NSString * const kAppCreationDestination = @"/Applications";
+
 @implementation WAVECreationDelegate
 
-@synthesize name, url, location;
+@synthesize name, url;
 
 #pragma mark Interface builder actions
 
@@ -18,7 +20,6 @@
 {
 	NSLog(@"name: %@", self.name);
 	NSLog(@"url: %@", self.url);
-	NSLog(@"location: %@", self.location);
 }
 
 #pragma mark Window Delegate
