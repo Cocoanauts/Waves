@@ -1,7 +1,7 @@
 Waves
 =====
 
-Waves is the easiest way to 'own' the websites that you use.
+Waves is the easiest way to 'own' your favorite websites.
 
 Imagine being able to bend every website to your preferences? Waves creates an .app of any website and gives a friendly and easy to use interface to modify and remove any element from the page.
 
