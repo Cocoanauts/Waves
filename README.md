@@ -7,7 +7,7 @@ Imagine being able to bend every website to your preferences? Waves creates an .
 
 It also supports manual CSS and JavaScript injection.
 
-In other words is everything we wanted [Fluid](http://fluidapp.com/) to be.
+**In other words Waves is everything we wanted [Fluid](http://fluidapp.com/) to be.**
 
 License
 =======
