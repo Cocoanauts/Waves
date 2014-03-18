@@ -14,6 +14,7 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *url;
 
++ (BOOL)validateURLUsingString:(NSString *)urlString;
 - (IBAction)create:(id)sender;
 
 @end

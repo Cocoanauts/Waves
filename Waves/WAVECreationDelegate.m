@@ -14,6 +14,16 @@ static NSString * const kAppCreationDestination = @"/Applications";
 
 @synthesize name, url;
 
+#pragma mark Class methods
+
++ (BOOL)validateURLUsingString:(NSString *)urlString
+{
+    NSURL *appURL = [NSURL URLWithString:urlString];
+    if (appURL) {
+    	return YES;
+    }
+	return NO;
+}
 #pragma mark Interface builder actions
 
 - (IBAction)create:(id)sender

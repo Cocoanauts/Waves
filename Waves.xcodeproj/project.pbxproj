@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDA4567018D6307F0092113B /* WaveApp.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDAE964618C8D8810063CC16 /* WaveApp.app */; };
 		BDB72CE318C7CE0800ABA136 /* WAVECreationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */; };
 		BDC39F8818C7C1B6007EA5FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */; };
 		BDC39F9218C7C1B6007EA5FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDC39F9018C7C1B6007EA5FC /* InfoPlist.strings */; };
@@ -44,6 +45,19 @@
 			remoteInfo = Waves;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BDA4566D18D630640092113B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				BDA4567018D6307F0092113B /* WaveApp.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BDAE964018C8D8800063CC16 /* WaveApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WaveApp.xcodeproj; path = WaveApp/WaveApp.xcodeproj; sourceTree = "<group>"; };
@@ -194,6 +208,7 @@
 				BDC39F8018C7C1B6007EA5FC /* Sources */,
 				BDC39F8118C7C1B6007EA5FC /* Frameworks */,
 				BDC39F8218C7C1B6007EA5FC /* Resources */,
+				BDA4566D18D630640092113B /* CopyFiles */,
 			);
 			buildRules = (
 			);
