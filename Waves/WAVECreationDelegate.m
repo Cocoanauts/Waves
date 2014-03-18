@@ -70,7 +70,7 @@ static NSString * const kAppCreationDestination = @"/Applications";
 
     	[[NSFileManager defaultManager] copyItemAtPath:waveAppPath toPath:destination error:&error];
         if (error) {
-        	//NSLog(@"error: %@", [error localizedDescription]);
+        	NSLog(@"error: %@", [error localizedDescription]);
         }
 
         NSString *bundleIdentifier = [NSString stringWithFormat:@"%@.%@", kAppBundleIdentifier, [WAVECreationDelegate sanitizeApplicationName:self.name andAllowSpace:NO]];
