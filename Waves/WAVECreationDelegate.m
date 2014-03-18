@@ -60,15 +60,31 @@ static NSString * const kAppCreationDestination = @"/Applications";
 
 - (IBAction)create:(id)sender
 {
-	NSLog(@"name: %@", self.name);
-	NSLog(@"url: %@", self.url);
+    if ([WAVECreationDelegate validateURLUsingString:self.url]) {
+    	NSString *waveAppPath = [NSString stringWithFormat:@"%@/WaveApp.app", [[NSBundle mainBundle] resourcePath]];
+    	NSBundle *waveAppBundle = [NSBundle bundleWithPath:waveAppPath];
+        NSString *applicationName = [WAVECreationDelegate sanitizeApplicationName:self.name];
+        NSString *destination = [NSString stringWithFormat:@"%@/%@", kAppCreationDestination, applicationName];
+        NSError *error;
+
+    	[[NSFileManager defaultManager] copyItemAtPath:waveAppPath toPath:destination error:&error];
+        if (error) {
+        	NSLog(@"error: %@", [error localizedDescription]);
+        }
+    }
+}
+
+- (void)awakeFromNib
+{
+    self.name = @"Face..book";
+    self.url = @"http://www.facebook.com";
 }
 
 #pragma mark Window Delegate
 
 - (void)windowDidBecomeMain:(NSNotification *)notification
 {
-	NSLog(@"window became main");
+
 }
 
 @end
