@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD6CAE8418D9EF9D00EF7B78 /* NSString+Waves.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6CAE8318D9EF9D00EF7B78 /* NSString+Waves.m */; };
 		BDA4567018D6307F0092113B /* WaveApp.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDAE964618C8D8810063CC16 /* WaveApp.app */; };
 		BDB72CE318C7CE0800ABA136 /* WAVECreationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */; };
 		BDC39F8818C7C1B6007EA5FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */; };
@@ -60,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BD6CAE8218D9EF9D00EF7B78 /* NSString+Waves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Waves.h"; sourceTree = "<group>"; };
+		BD6CAE8318D9EF9D00EF7B78 /* NSString+Waves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Waves.m"; sourceTree = "<group>"; };
 		BDAE964018C8D8800063CC16 /* WaveApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WaveApp.xcodeproj; path = WaveApp/WaveApp.xcodeproj; sourceTree = "<group>"; };
 		BDB72CE118C7CE0800ABA136 /* WAVECreationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVECreationDelegate.h; sourceTree = "<group>"; };
 		BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAVECreationDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 				BDC39F9A18C7C1B6007EA5FC /* WAVEAppDelegate.m */,
 				BDB72CE118C7CE0800ABA136 /* WAVECreationDelegate.h */,
 				BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */,
+				BD6CAE8218D9EF9D00EF7B78 /* NSString+Waves.h */,
+				BD6CAE8318D9EF9D00EF7B78 /* NSString+Waves.m */,
 				BDC39F9C18C7C1B6007EA5FC /* MainMenu.xib */,
 				BDC39F9F18C7C1B6007EA5FC /* Images.xcassets */,
 				BDC39F8E18C7C1B6007EA5FC /* Supporting Files */,
@@ -321,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6CAE8418D9EF9D00EF7B78 /* NSString+Waves.m in Sources */,
 				BDB72CE318C7CE0800ABA136 /* WAVECreationDelegate.m in Sources */,
 				BDC39F9418C7C1B6007EA5FC /* main.m in Sources */,
 				BDC39F9B18C7C1B6007EA5FC /* WAVEAppDelegate.m in Sources */,
