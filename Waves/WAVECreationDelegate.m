@@ -44,17 +44,17 @@ static NSString * const kAppCreationDestination = @"/Applications";
 {
     NSString *plistPath = [[bundle bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"];
     NSLog(@"%@", plistPath);
-	NSDictionary *preferencesPlist = [NSDictionary wave_openPlistAtPath:plistPath];
+	NSDictionary *preferencesPlist = [NSDictionary wave_plistAtPath:plistPath];
     [preferencesPlist setValue:bundleIdentifier forKey:@"CFBundleIdentifier"];
-    [preferencesPlist wave_save:plistPath];
+    [preferencesPlist wave_saveAtPath:plistPath];
 }
 
 - (void)writeMainURLToPlistUsingBundle:(NSBundle *)bundle
 {
 	NSString *plistPath = [bundle pathForResource:@"preferences" ofType:@"plist"];
-	NSDictionary *preferencesPlist = [NSDictionary wave_openPlistAtPath:plistPath];
+	NSDictionary *preferencesPlist = [NSDictionary wave_plistAtPath:plistPath];
     [preferencesPlist setValue:self.url forKey:@"mainURL"];
-    [preferencesPlist wave_save:plistPath];
+    [preferencesPlist wave_saveAtPath:plistPath];
 }
 
 - (void)awakeFromNib

@@ -10,7 +10,7 @@
 
 @implementation NSDictionary (Waves)
 
-+ (NSDictionary *)wave_openPlistAtPath:(NSString *)path
++ (NSDictionary *)wave_plistAtPath:(NSString *)path
 {
     NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:path];
     NSString *errorDescription = nil;
@@ -23,7 +23,7 @@
 	return plistDictionary;
 }
 
-- (BOOL)wave_save:(NSString *)path
+- (BOOL)wave_saveAtPath:(NSString *)path
 {
     NSError *error;
 	NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:self format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];

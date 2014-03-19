@@ -10,7 +10,7 @@
 
 @interface NSDictionary (Waves)
 
-+ (NSDictionary *)wave_openPlistAtPath:(NSString *)path;
-- (BOOL)wave_save:(NSString *)path;
++ (NSDictionary *)wave_plistAtPath:(NSString *)path;
+- (BOOL)wave_saveAtPath:(NSString *)path;
 
 @end
