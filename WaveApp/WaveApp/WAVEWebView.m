@@ -17,6 +17,7 @@ static NSString * const kEnableSwipe = @"AppleEnableSwipeNavigateWithScrolls";
 
 - (void)awakeFromNib
 {
+    [self setWantsLayer:YES];
 	[self setShouldCloseWithWindow:NO];
 }
 
@@ -25,6 +26,10 @@ static NSString * const kEnableSwipe = @"AppleEnableSwipeNavigateWithScrolls";
 - (BOOL)acceptsFirstResponder
 {
 	return YES;
+}
+
+- (BOOL)canDrawSubviewsIntoLayer {
+    return YES;
 }
 
 #pragma mark Event handlers
