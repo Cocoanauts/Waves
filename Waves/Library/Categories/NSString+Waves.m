@@ -10,7 +10,7 @@
 
 @implementation NSString (Waves)
 
-- (BOOL)isURL
+- (BOOL)waves_isURL
 {
     NSURL *appURL = [NSURL URLWithString:self];
     if (appURL) {
@@ -19,7 +19,7 @@
 	return NO;
 }
 
-- (NSString *)applicationFriendlyName
+- (NSString *)waves_applicationFriendlyName
 {
 	NSRange uppercaseCharacterRange = NSMakeRange(65, 90-65+1);
     NSRange lowercaseCharacterRange = NSMakeRange(97, 122-97+1);
@@ -48,9 +48,9 @@
     return [NSString stringWithFormat:@"%@", mutableString];
 }
 
-- (NSString *)bundleIdentifierFriendly
+- (NSString *)waves_bundleIdentifierFriendly
 {
-	return [[self applicationFriendlyName] stringByReplacingOccurrencesOfString:@" " withString:@""];
+	return [[self waves_applicationFriendlyName] stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 
 @end

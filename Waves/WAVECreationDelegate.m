@@ -22,9 +22,9 @@ static NSString * const kAppCreationDestination = @"/Applications";
 
 - (IBAction)create:(id)sender
 {
-    if ([self.url isURL]) {
+    if ([self.url waves_isURL]) {
         NSString *waveAppPath = [NSString stringWithFormat:@"%@/WaveApp.app", [[NSBundle mainBundle] resourcePath]];
-        NSString *applicationName = [self.name applicationFriendlyName];
+        NSString *applicationName = [self.name waves_applicationFriendlyName];
         NSString *destination = [NSString stringWithFormat:@"%@/%@.app", kAppCreationDestination, applicationName];
         NSError *error;
         
@@ -33,7 +33,7 @@ static NSString * const kAppCreationDestination = @"/Applications";
         	NSLog(@"error: %@", [error localizedDescription]);
         }
         
-        NSString *bundleIdentifier = [NSString stringWithFormat:@"%@.%@", [[NSBundle mainBundle] bundleIdentifier], [self.name bundleIdentifierFriendly]];
+        NSString *bundleIdentifier = [NSString stringWithFormat:@"%@.%@", [[NSBundle mainBundle] bundleIdentifier], [self.name waves_bundleIdentifierFriendly]];
         NSBundle *waveAppBundle = [NSBundle bundleWithPath:destination];
         [self writeMainURLToPlistUsingBundle:waveAppBundle];
         [self setBundleIdentifier:(NSString *)bundleIdentifier toBundle:waveAppBundle];

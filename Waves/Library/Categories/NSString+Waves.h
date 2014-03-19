@@ -10,8 +10,8 @@
 
 @interface NSString (Waves)
 
-- (BOOL)isURL;
-- (NSString *)applicationFriendlyName;
-- (NSString *)bundleIdentifierFriendly;
+- (BOOL)waves_isURL;
+- (NSString *)waves_applicationFriendlyName;
+- (NSString *)waves_bundleIdentifierFriendly;
 
 @end
