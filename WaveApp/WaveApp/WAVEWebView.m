@@ -99,9 +99,9 @@ static NSString * const kEnableSwipe = @"AppleEnableSwipeNavigateWithScrolls";
     }
 
     if (sum > 0) {
-    	[self goForward];
-    } else {
     	[self goBack];
+    } else {
+      [self goForward];
     }
 }
 
