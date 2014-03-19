@@ -16,8 +16,6 @@ static NSString * const kAppCreationDestination = @"/Applications";
 
 @synthesize name, url;
 
-#pragma mark Class methods
-
 #pragma mark Interface builder actions
 
 - (IBAction)create:(id)sender
@@ -26,10 +24,10 @@ static NSString * const kAppCreationDestination = @"/Applications";
         NSString *waveAppPath = [NSString stringWithFormat:@"%@/WaveApp.app", [[NSBundle mainBundle] resourcePath]];
         NSString *applicationName = [self.name waves_applicationFriendlyName];
         NSString *destination = [NSString stringWithFormat:@"%@/%@.app", kAppCreationDestination, applicationName];
-        NSError *error;
-        
-        [[NSFileManager defaultManager] copyItemAtPath:waveAppPath toPath:destination error:&error];
-        if (error) {
+        NSError *error = nil;
+        BOOL didCopyItem = [[NSFileManager defaultManager] copyItemAtPath:waveAppPath toPath:destination error:&error];
+
+        if (!didCopyItem) {
         	NSLog(@"error: %@", [error localizedDescription]);
         }
         
