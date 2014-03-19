@@ -82,7 +82,6 @@ static NSString * const kAppCreationDestination = @"/Applications";
 
 - (void)setBundleIdentifier:(NSString *)bundleIdentifier toBundle:(NSBundle *)bundle
 {
-    NSError *error;
     NSString *plistPath = [[bundle bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"];
     NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
     NSString *errorDesc = nil;
@@ -93,19 +92,18 @@ static NSString * const kAppCreationDestination = @"/Applications";
     }
     [preferencesDict setValue:bundleIdentifier forKey:@"CFBundleIdentifier"];
     // create NSData from dictionary
-    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:preferencesDict format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:preferencesDict format:NSPropertyListXMLFormat_v1_0 errorDescription:&errorDesc];
     
     // check is plistData exists
     if(plistData) {
         [plistData writeToFile:plistPath atomically:YES];
     } else {
-        NSLog(@"Error in saveData: %@", error);
+        NSLog(@"Error in saveData: %@", errorDesc);
     }
 }
 
 - (void)writeMainURLToPlistUsingBundle:(NSBundle *)bundle
 {
-    NSError *error;
 	NSString *plistPath = [bundle pathForResource:@"preferences" ofType:@"plist"];
     NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
     NSString *errorDesc = nil;
@@ -116,13 +114,13 @@ static NSString * const kAppCreationDestination = @"/Applications";
     }
     [preferencesDict setValue:self.url forKey:@"mainURL"];
     // create NSData from dictionary
-    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:preferencesDict format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:preferencesDict format:NSPropertyListXMLFormat_v1_0 errorDescription:&errorDesc];
     
     // check is plistData exists
     if(plistData) {
         [plistData writeToFile:plistPath atomically:YES];
     } else {
-        NSLog(@"Error in saveData: %@", error);
+        NSLog(@"Error in saveData: %@", errorDesc);
     }
 }
 
