@@ -8,8 +8,8 @@
 
 #import "WAVECreationDelegate.h"
 #import "NSString+Waves.h"
+#import "NSDictionary+Waves.h"
 
-static NSString * const kAppBundleIdentifier = @"com.cocoanauts.WaveApp";
 static NSString * const kAppCreationDestination = @"/Applications";
 
 @implementation WAVECreationDelegate
@@ -33,7 +33,7 @@ static NSString * const kAppCreationDestination = @"/Applications";
         	NSLog(@"error: %@", [error localizedDescription]);
         }
         
-        NSString *bundleIdentifier = [NSString stringWithFormat:@"%@.%@", kAppBundleIdentifier, [self.name bundleIdentifierFriendly]];
+        NSString *bundleIdentifier = [NSString stringWithFormat:@"%@.%@", [[NSBundle mainBundle] bundleIdentifier], [self.name bundleIdentifierFriendly]];
         NSBundle *waveAppBundle = [NSBundle bundleWithPath:destination];
         [self writeMainURLToPlistUsingBundle:waveAppBundle];
         [self setBundleIdentifier:(NSString *)bundleIdentifier toBundle:waveAppBundle];
@@ -42,48 +42,19 @@ static NSString * const kAppCreationDestination = @"/Applications";
 
 - (void)setBundleIdentifier:(NSString *)bundleIdentifier toBundle:(NSBundle *)bundle
 {
-    NSError *error;
     NSString *plistPath = [[bundle bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"];
-    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
-    NSString *errorDesc = nil;
-    NSPropertyListFormat format;
-    NSDictionary *preferencesDict = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
-    if (!preferencesDict) {
-        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
-    }
-    [preferencesDict setValue:bundleIdentifier forKey:@"CFBundleIdentifier"];
-    // create NSData from dictionary
-    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:preferencesDict format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
-    
-    // check is plistData exists
-    if(plistData) {
-        [plistData writeToFile:plistPath atomically:YES];
-    } else {
-        NSLog(@"Error in saveData: %@", error);
-    }
+    NSLog(@"%@", plistPath);
+	NSDictionary *preferencesPlist = [NSDictionary wave_openPlistAtPath:plistPath];
+    [preferencesPlist setValue:bundleIdentifier forKey:@"CFBundleIdentifier"];
+    [preferencesPlist wave_save:plistPath];
 }
 
 - (void)writeMainURLToPlistUsingBundle:(NSBundle *)bundle
 {
-    NSError *error;
 	NSString *plistPath = [bundle pathForResource:@"preferences" ofType:@"plist"];
-    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
-    NSString *errorDesc = nil;
-    NSPropertyListFormat format;
-    NSDictionary *preferencesDict = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
-    if (!preferencesDict) {
-        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
-    }
-    [preferencesDict setValue:self.url forKey:@"mainURL"];
-    // create NSData from dictionary
-    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:preferencesDict format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
-    
-    // check is plistData exists
-    if(plistData) {
-        [plistData writeToFile:plistPath atomically:YES];
-    } else {
-        NSLog(@"Error in saveData: %@", error);
-    }
+	NSDictionary *preferencesPlist = [NSDictionary wave_openPlistAtPath:plistPath];
+    [preferencesPlist setValue:self.url forKey:@"mainURL"];
+    [preferencesPlist wave_save:plistPath];
 }
 
 - (void)awakeFromNib
