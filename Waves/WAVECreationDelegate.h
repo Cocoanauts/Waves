@@ -14,9 +14,6 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *url;
 
-+ (BOOL)validateURLUsingString:(NSString *)urlString;
-+ (NSString *)sanitizeApplicationName:(NSString *)appName andAllowSpace:(BOOL)allowSpace;
-
 - (IBAction)create:(id)sender;
 
 @end
