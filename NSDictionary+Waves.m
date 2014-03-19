@@ -25,13 +25,13 @@
 
 - (BOOL)wave_saveAtPath:(NSString *)path
 {
-    NSError *error;
-	NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:self format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+    NSString *errorDesc;
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:self format:NSPropertyListXMLFormat_v1_0 errorDescription:&errorDesc];
     
     if(plistData) {
         [plistData writeToFile:path atomically:YES];
     } else {
-        NSLog(@"Error in saveData: %@", error);
+        NSLog(@"Error in saveData: %@", errorDesc);
         return NO;
     }
     return YES;
