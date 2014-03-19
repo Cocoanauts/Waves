@@ -10,9 +10,12 @@
 
 @interface WAVECreationDelegate : NSObject <NSWindowDelegate>
 
+@property (nonatomic, retain) IBOutlet NSWindow *window;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *url;
-@property (nonatomic, retain) NSString *location;
+
++ (BOOL)validateURLUsingString:(NSString *)urlString;
++ (NSString *)sanitizeApplicationName:(NSString *)appName andAllowSpace:(BOOL)allowSpace;
 
 - (IBAction)create:(id)sender;
 
