@@ -26,7 +26,7 @@
 - (BOOL)wave_save:(NSString *)path
 {
     NSError *error;
-	NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:self format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:self format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
     
     if(plistData) {
         [plistData writeToFile:path atomically:YES];

@@ -44,7 +44,7 @@ static NSString * const kAppCreationDestination = @"/Applications";
 {
     NSString *plistPath = [[bundle bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"];
     NSLog(@"%@", plistPath);
-	NSDictionary *preferencesPlist = [NSDictionary wave_openPlistAtPath:plistPath];
+    NSDictionary *preferencesPlist = [NSDictionary wave_openPlistAtPath:plistPath];
     [preferencesPlist setValue:bundleIdentifier forKey:@"CFBundleIdentifier"];
     [preferencesPlist wave_save:plistPath];
 }
