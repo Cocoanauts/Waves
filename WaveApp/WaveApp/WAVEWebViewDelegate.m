@@ -47,7 +47,6 @@
     DOMDocument *domDocument = [sender mainFrameDocument];    
     DOMElement *styleElement = [domDocument createElement:@"style"];
     [styleElement setAttribute:@"type" value:@"text/css"];
-    
 
     NSString *string = [self.preferencesDict objectForKey:@"CSS"];
     DOMText *cssText = [domDocument createTextNode:string];
