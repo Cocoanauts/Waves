@@ -7,8 +7,10 @@
 //
 
 #import "WAVEWebViewDelegate.h"
+#import "WAVEWebView.h"
 
 @interface WAVEWebViewDelegate ()
+@property (assign) IBOutlet WAVEWebView *webView;
 @property (nonatomic, strong) NSDictionary *preferencesDict;
 @end
 
@@ -45,7 +47,6 @@
     DOMDocument *domDocument = [sender mainFrameDocument];    
     DOMElement *styleElement = [domDocument createElement:@"style"];
     [styleElement setAttribute:@"type" value:@"text/css"];
-    
 
     NSString *string = [self.preferencesDict objectForKey:@"CSS"];
     DOMText *cssText = [domDocument createTextNode:string];

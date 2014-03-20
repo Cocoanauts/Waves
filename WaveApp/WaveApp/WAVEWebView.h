@@ -10,11 +10,4 @@
 
 @interface WAVEWebView : WebView
 
-@property (nonatomic, retain) NSMutableDictionary *gestures;
-
-- (BOOL)acceptsFirstResponder;
-- (BOOL)twoFingerGestures;
-- (void)beginGestureWithEvent:(NSEvent *)event;
-- (void)endGestureWithEvent:(NSEvent *)event;
-
 @end
