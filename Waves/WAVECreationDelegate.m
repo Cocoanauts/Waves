@@ -10,7 +10,7 @@
 #import "NSString+Waves.h"
 #import "NSDictionary+Waves.h"
 
-static NSString * const kAppCreationDestination = @"/Applications";
+static NSString * const WAVEAppCreationDestination = @"/Applications";
 
 @implementation WAVECreationDelegate
 
@@ -23,7 +23,7 @@ static NSString * const kAppCreationDestination = @"/Applications";
     if ([self.url waves_isURL]) {
         NSString *waveAppPath = [NSString stringWithFormat:@"%@/WaveApp.app", [[NSBundle mainBundle] resourcePath]];
         NSString *applicationName = [self.name waves_applicationFriendlyName];
-        NSString *destination = [NSString stringWithFormat:@"%@/%@.app", kAppCreationDestination, applicationName];
+        NSString *destination = [NSString stringWithFormat:@"%@/%@.app", WAVEAppCreationDestination, applicationName];
         NSError *error = nil;
         BOOL didCopyItem = [[NSFileManager defaultManager] copyItemAtPath:waveAppPath toPath:destination error:&error];
 
