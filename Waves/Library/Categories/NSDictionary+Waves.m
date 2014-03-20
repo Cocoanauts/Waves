@@ -15,7 +15,10 @@
     NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:path];
     NSString *errorDescription = nil;
     NSPropertyListFormat format;
-    NSDictionary *plistDictionary = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDescription];
+    NSDictionary *plistDictionary = [NSPropertyListSerialization propertyListFromData:plistXML
+                                                                     mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                                                               format:&format
+                                                                     errorDescription:&errorDescription];
     if (!plistDictionary) {
         NSLog(@"Error reading plist: %@, format: %lu", errorDescription, format);
         return nil;
@@ -26,7 +29,9 @@
 - (BOOL)wave_saveAtPath:(NSString *)path
 {
     NSString *errorDesc;
-    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:self format:NSPropertyListXMLFormat_v1_0 errorDescription:&errorDesc];
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:self
+                                                                   format:NSPropertyListXMLFormat_v1_0
+                                                         errorDescription:&errorDesc];
     
     if(plistData) {
         [plistData writeToFile:path atomically:YES];
