@@ -32,7 +32,7 @@ static NSString * const WAVEAppCreationDestination = @"/Applications";
         NSString *bundleIdentifier = [NSString stringWithFormat:@"%@.%@", [[NSBundle mainBundle] bundleIdentifier], [self.name waves_bundleIdentifierFriendly]];
         NSBundle *waveAppBundle = [NSBundle bundleWithPath:destination];
         [self writeMainURLToPlistUsingBundle:waveAppBundle];
-        [self setBundleIdentifier:(NSString *)bundleIdentifier toBundle:waveAppBundle];
+        [self setBundleIdentifier:bundleIdentifier toBundle:waveAppBundle];
     }
 }
 
