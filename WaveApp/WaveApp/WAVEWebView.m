@@ -8,12 +8,17 @@
 
 #import "WAVEWebView.h"
 
-@implementation WAVEWebView
+static const CGFloat kSwipeMinimumLength = 0.3;
 
-#define kSwipeMinimumLength 0.3
 static NSString * const kEnableSwipe = @"AppleEnableSwipeNavigateWithScrolls";
 
-@synthesize gestures;
+@interface WAVEWebView ()
+
+@property (nonatomic, strong) NSMutableDictionary *gestures;
+
+@end
+
+@implementation WAVEWebView
 
 - (void)awakeFromNib
 {
