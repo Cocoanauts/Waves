@@ -14,8 +14,6 @@ static NSString * const WAVEAppCreationDestination = @"/Applications";
 
 @implementation WAVECreationDelegate
 
-@synthesize name, url;
-
 #pragma mark Interface builder actions
 
 - (IBAction)create:(id)sender
