@@ -12,6 +12,11 @@
 
 static NSString * const WAVEAppCreationDestination = @"/Applications";
 
+@interface WAVECreationDelegate () <NSWindowDelegate>
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *url;
+@end
+
 @implementation WAVECreationDelegate
 
 #pragma mark Interface builder actions

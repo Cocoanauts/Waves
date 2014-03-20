@@ -6,14 +6,6 @@
 //  Copyright (c) 2014 Hyper. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface WAVECreationDelegate : NSObject <NSWindowDelegate>
-
-@property (nonatomic, retain) IBOutlet NSWindow *window;
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *url;
-
-- (IBAction)create:(id)sender;
+@interface WAVECreationDelegate : NSObject
 
 @end
