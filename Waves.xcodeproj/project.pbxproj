@@ -66,8 +66,6 @@
 		14BBA5C018DA3B73002E86A9 /* NSString+Waves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Waves.m"; sourceTree = "<group>"; };
 		14BBA5C218DA3BA7002E86A9 /* NSDictionary+Waves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Waves.h"; sourceTree = "<group>"; };
 		14BBA5C318DA3BA7002E86A9 /* NSDictionary+Waves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Waves.m"; sourceTree = "<group>"; };
-		BD6CAE8218D9EF9D00EF7B78 /* NSString+Waves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Waves.h"; sourceTree = "<group>"; };
-		BD6CAE8318D9EF9D00EF7B78 /* NSString+Waves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Waves.m"; sourceTree = "<group>"; };
 		BDAE964018C8D8800063CC16 /* WaveApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WaveApp.xcodeproj; path = WaveApp/WaveApp.xcodeproj; sourceTree = "<group>"; };
 		BDB72CE118C7CE0800ABA136 /* WAVECreationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVECreationDelegate.h; sourceTree = "<group>"; };
 		BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAVECreationDelegate.m; sourceTree = "<group>"; };
@@ -190,8 +188,6 @@
 				BDC39F9A18C7C1B6007EA5FC /* WAVEAppDelegate.m */,
 				BDB72CE118C7CE0800ABA136 /* WAVECreationDelegate.h */,
 				BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */,
-				BD6CAE8218D9EF9D00EF7B78 /* NSString+Waves.h */,
-				BD6CAE8318D9EF9D00EF7B78 /* NSString+Waves.m */,
 				BDC39F9C18C7C1B6007EA5FC /* MainMenu.xib */,
 				BDC39F9F18C7C1B6007EA5FC /* Images.xcassets */,
 				BDC39F8E18C7C1B6007EA5FC /* Supporting Files */,
