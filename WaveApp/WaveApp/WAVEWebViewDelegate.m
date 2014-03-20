@@ -7,8 +7,10 @@
 //
 
 #import "WAVEWebViewDelegate.h"
+#import "WAVEWebView.h"
 
 @interface WAVEWebViewDelegate ()
+@property (assign) IBOutlet WAVEWebView *webView;
 @property (nonatomic, strong) NSDictionary *preferencesDict;
 @end
 
