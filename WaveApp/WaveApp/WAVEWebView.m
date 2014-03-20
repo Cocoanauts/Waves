@@ -8,15 +8,21 @@
 
 #import "WAVEWebView.h"
 
-@implementation WAVEWebView
+static const CGFloat kSwipeMinimumLength = 0.3;
 
-#define kSwipeMinimumLength 0.3
 static NSString * const kEnableSwipe = @"AppleEnableSwipeNavigateWithScrolls";
 
-@synthesize gestures;
+@interface WAVEWebView ()
+
+@property (nonatomic, strong) NSMutableDictionary *gestures;
+
+@end
+
+@implementation WAVEWebView
 
 - (void)awakeFromNib
 {
+    [self setWantsLayer:YES];
 	[self setShouldCloseWithWindow:NO];
 }
 
@@ -25,6 +31,10 @@ static NSString * const kEnableSwipe = @"AppleEnableSwipeNavigateWithScrolls";
 - (BOOL)acceptsFirstResponder
 {
 	return YES;
+}
+
+- (BOOL)canDrawSubviewsIntoLayer {
+    return YES;
 }
 
 #pragma mark Event handlers
@@ -94,9 +104,9 @@ static NSString * const kEnableSwipe = @"AppleEnableSwipeNavigateWithScrolls";
     }
 
     if (sum > 0) {
-    	[self goForward];
-    } else {
     	[self goBack];
+    } else {
+      [self goForward];
     }
 }
 
