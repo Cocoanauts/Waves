@@ -16,6 +16,7 @@
 		14B1988318D48AE0007BD001 /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B1987E18D48AE0007BD001 /* MASPreferencesWindow.xib */; };
 		14B1988418D48AE0007BD001 /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1988018D48AE0007BD001 /* MASPreferencesWindowController.m */; };
 		14B1988518D48AE0007BD001 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 14B1988118D48AE0007BD001 /* README.md */; };
+		14CD6D8418E0CFAE00DC1606 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CD6D8318E0CFAE00DC1606 /* Dropbox.framework */; };
 		BDAE960D18C8D8800063CC16 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAE960C18C8D8800063CC16 /* Cocoa.framework */; };
 		BDAE961718C8D8800063CC16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDAE961518C8D8800063CC16 /* InfoPlist.strings */; };
 		BDAE961918C8D8800063CC16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE961818C8D8800063CC16 /* main.m */; };
@@ -56,6 +57,7 @@
 		14B1987F18D48AE0007BD001 /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
 		14B1988018D48AE0007BD001 /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		14B1988118D48AE0007BD001 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		14CD6D8318E0CFAE00DC1606 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		BDAE960918C8D8800063CC16 /* WaveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAE960C18C8D8800063CC16 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BDAE960F18C8D8800063CC16 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -88,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDAE964A18C8D91C0063CC16 /* WebKit.framework in Frameworks */,
+				14CD6D8418E0CFAE00DC1606 /* Dropbox.framework in Frameworks */,
 				BDAE960D18C8D8800063CC16 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +166,7 @@
 		BDAE960B18C8D8800063CC16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14CD6D8318E0CFAE00DC1606 /* Dropbox.framework */,
 				BDAE964918C8D91C0063CC16 /* WebKit.framework */,
 				BDAE960C18C8D8800063CC16 /* Cocoa.framework */,
 				BDAE962B18C8D8800063CC16 /* XCTest.framework */,
@@ -470,6 +474,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaveApp/WaveApp-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -489,6 +497,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaveApp/WaveApp-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
