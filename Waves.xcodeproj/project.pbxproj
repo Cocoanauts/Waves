@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14BBA5C118DA3B73002E86A9 /* NSString+Waves.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BBA5C018DA3B73002E86A9 /* NSString+Waves.m */; };
 		14BBA5C418DA3BA7002E86A9 /* NSDictionary+Waves.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BBA5C318DA3BA7002E86A9 /* NSDictionary+Waves.m */; };
+		BD937CBF191754BF0003A74F /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BD937CBE191754BF0003A74F /* Warnings.xcconfig */; };
 		BDA4567018D6307F0092113B /* WaveApp.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDAE964618C8D8810063CC16 /* WaveApp.app */; };
 		BDB72CE318C7CE0800ABA136 /* WAVECreationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */; };
 		BDC39F8818C7C1B6007EA5FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */; };
@@ -66,6 +67,7 @@
 		14BBA5C018DA3B73002E86A9 /* NSString+Waves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Waves.m"; sourceTree = "<group>"; };
 		14BBA5C218DA3BA7002E86A9 /* NSDictionary+Waves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Waves.h"; sourceTree = "<group>"; };
 		14BBA5C318DA3BA7002E86A9 /* NSDictionary+Waves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Waves.m"; sourceTree = "<group>"; };
+		BD937CBE191754BF0003A74F /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		BDAE964018C8D8800063CC16 /* WaveApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WaveApp.xcodeproj; path = WaveApp/WaveApp.xcodeproj; sourceTree = "<group>"; };
 		BDB72CE118C7CE0800ABA136 /* WAVECreationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVECreationDelegate.h; sourceTree = "<group>"; };
 		BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAVECreationDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		BDC39F7B18C7C1B6007EA5FC = {
 			isa = PBXGroup;
 			children = (
+				BD937CBE191754BF0003A74F /* Warnings.xcconfig */,
 				14BBA5BD18DA3B73002E86A9 /* Library */,
 				BDC39F8D18C7C1B6007EA5FC /* Waves */,
 				BDC39FAB18C7C1B6007EA5FC /* WavesTests */,
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC39F9218C7C1B6007EA5FC /* InfoPlist.strings in Resources */,
+				BD937CBF191754BF0003A74F /* Warnings.xcconfig in Resources */,
 				BDC39FA018C7C1B6007EA5FC /* Images.xcassets in Resources */,
 				BDC39F9818C7C1B6007EA5FC /* Credits.rtf in Resources */,
 				BDC39F9E18C7C1B6007EA5FC /* MainMenu.xib in Resources */,
@@ -412,6 +416,7 @@
 /* Begin XCBuildConfiguration section */
 		BDC39FB318C7C1B6007EA5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD937CBE191754BF0003A74F /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -449,6 +454,7 @@
 		};
 		BDC39FB418C7C1B6007EA5FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD937CBE191754BF0003A74F /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
