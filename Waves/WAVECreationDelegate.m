@@ -28,12 +28,12 @@ static NSString * const WAVEAppCreationDestination = @"/Applications";
         NSString *applicationName = [self.name waves_applicationFriendlyName];
         NSString *destination = [NSString stringWithFormat:@"%@/%@.app", WAVEAppCreationDestination, applicationName];
         NSError *error = nil;
-        BOOL didCopyItem = [[NSFileManager defaultManager] copyItemAtPath:waveAppPath toPath:destination error:&error];
+        BOOL didCopyApplication = [[NSFileManager defaultManager] copyItemAtPath:waveAppPath toPath:destination error:&error];
 
-        if (!didCopyItem) {
+        if (!didCopyApplication) {
         	NSLog(@"error: %@", [error localizedDescription]);
         }
-        
+
         NSString *bundleIdentifier = [NSString stringWithFormat:@"%@.%@", [[NSBundle mainBundle] bundleIdentifier], [self.name waves_bundleIdentifierFriendly]];
         NSBundle *waveAppBundle = [NSBundle bundleWithPath:destination];
         [self writeMainURLToPlistUsingBundle:waveAppBundle];
