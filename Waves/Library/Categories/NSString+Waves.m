@@ -26,7 +26,7 @@
     NSRange latinCharacterRange = NSMakeRange(192, 255-192+1);
     NSMutableString *mutableString = [[NSMutableString alloc] init];
 
-    int asciiCode;
+    NSUInteger asciiCode;
     unichar unicodeCharacter;
 
     for (NSUInteger charIndex=0; charIndex<self.length; ++charIndex) {
