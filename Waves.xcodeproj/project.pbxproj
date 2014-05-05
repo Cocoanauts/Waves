@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		14BBA5C118DA3B73002E86A9 /* NSString+Waves.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BBA5C018DA3B73002E86A9 /* NSString+Waves.m */; };
 		14BBA5C418DA3BA7002E86A9 /* NSDictionary+Waves.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BBA5C318DA3BA7002E86A9 /* NSDictionary+Waves.m */; };
-		BD937CBF191754BF0003A74F /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BD937CBE191754BF0003A74F /* Warnings.xcconfig */; };
 		BDA4567018D6307F0092113B /* WaveApp.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDAE964618C8D8810063CC16 /* WaveApp.app */; };
 		BDB72CE318C7CE0800ABA136 /* WAVECreationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB72CE218C7CE0800ABA136 /* WAVECreationDelegate.m */; };
 		BDC39F8818C7C1B6007EA5FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC39F8718C7C1B6007EA5FC /* Cocoa.framework */; };
@@ -274,7 +273,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = WAVE;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Hyper;
 				TargetAttributes = {
 					BDC39FA418C7C1B6007EA5FC = {
@@ -330,7 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC39F9218C7C1B6007EA5FC /* InfoPlist.strings in Resources */,
-				BD937CBF191754BF0003A74F /* Warnings.xcconfig in Resources */,
 				BDC39FA018C7C1B6007EA5FC /* Images.xcassets in Resources */,
 				BDC39F9818C7C1B6007EA5FC /* Credits.rtf in Resources */,
 				BDC39F9E18C7C1B6007EA5FC /* MainMenu.xib in Resources */,
